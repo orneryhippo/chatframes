@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='chatzone.css') }}"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFB Conversation</title>
+
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+  </head>
+  <body>
+    <!-- Header section for branding and navigation -->
+    <div id="header">
+      <h1>DFB Conversation</h1>
+      <!-- Add navigation links if needed -->
+    </div>
+
+    <!-- Main content area -->
+    <div id="response-area">
+      <!-- Response area content will be populated dynamically -->
+      Response Area
+    </div>
+
+    <!-- Left section -->
+    <div id="left-section">
+      <!-- Left section content -->
+      Left Section
+      <!-- You can add additional content or navigation links here -->
+    </div>
+
+    <!-- Right section -->
+    <div id="control-area">
+      <div class="controls-grid-container">
+        <!-- Control Area<br /> -->
+        <!-- Control area content (e.g., buttons) -->
+        <div>
+          <label for="promptSelector">GPT Version:</label>
+          <select id="promptSelector" name="prompt">
+            <option value="gpt-4">gpt-4</option>
+            <option value="gpt-4-turbo-preview">gpt-4-turbo-preview</option>
+            <option value="gpt-4-0125-preview">gpt-4-0125-preview</option>
+            <option value="gpt-4-1106-preview">gpt-4-1106-preview</option>
+            <option value="gpt-4-0613">gpt-4-0613</option>
+            <option value="gpt-3.5-turbo" selected="True">gpt-3.5-turbo</option>
+            <option value="gpt-3.5-turbo-1106">gpt-3.5-turbo-1106</option>
+            <option value="gpt-3.5-turbo-0613">gpt-3.5-turbo-0613</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div>
+          Enter your API Key
+          <input type="password" id="api-key" />
+        </div>
+        <div>
+          <label for="promptSelector">Choose a prompt:</label>
+          <select id="promptSelector" name="prompt">
+            <option value="DFBPE_PROMPT" selected="True">
+              DFB Prompt Enhancer
+            </option>
+            <option value="DFB_PROMPT">Deep Fried Baloney</option>
+            <option value="PCL_PROMPT">Project Chicken Little</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="user-section">User Section</div>
+
+    <!-- Question area at the bottom -->
+
+    <div id="question-area">
+      <!-- Question area with input field and Ask button -->
+      <input
+        type="text"
+        id="question-input"
+        placeholder="Enter your question"
+      />
+      <button id="ask-button">Ask</button>
+    </div>
+
+    <div id="clear-button-container">
+      <button id="clear-button">Clear Conversation</button>
+    </div>
+  </body>
+</html>
