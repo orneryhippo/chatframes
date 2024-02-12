@@ -8,7 +8,7 @@ import requests
 from pprint import pprint as pp
 from icecream import ic 
 from datetime import datetime 
-import prompts
+# import prompts
 from dotenv import load_dotenv
 import os
 import logging
