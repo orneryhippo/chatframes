@@ -1,0 +1,132 @@
+body {
+  display: grid;
+  grid-template-columns: 15% 70% 15%; /* Specifies the width proportions of left, middle, and right sections */
+  grid-template-rows: auto 1fr auto; /* Header height, middle content height, question area height */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#header {
+  grid-column: 1 / -1; /* Spans the full width */
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#left-section {
+  border-right: 1px solid #ccc;
+  background-color: #f0f0f0;
+  padding: 20px;
+  grid-column: 1; /* Occupies the first (left) column */
+  grid-row: 2; /* Occupies the second row */
+  overflow: auto;
+}
+
+#response-area {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+  grid-column: 2; /* Occupies the second (middle) column */
+  grid-row: 2; /* Occupies the second row */
+  border-radius: 10px; /* Rounds the corners of the response area */
+}
+
+#control-area {
+  grid-column: 3; /* Occupies the third (right) column */
+  grid-row: 2; /* Occupies the second row */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+#question-area {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  grid-column: 2; /* Occupies the center column */
+  grid-row: 3; /* Occupied the third (bottom) row */
+}
+
+#control-area {
+  background-color: #f0f0f0;
+  padding: 20px;
+  grid-column: 3;
+  grid-row: 2; /* Occupies the second row, full height */
+}
+
+#question-area {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  grid-column: 2; /* Spans middle section */
+  grid-row: 3; /* Third row, just above the bottom of the viewport */
+}
+
+#question-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#ask-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#clear-button-container {
+  background-color: #f0f0f0;
+  display: flex; /* Use flexbox to center child elements */
+  justify-content: center; /* Center horizontally */
+  align-items: bottom; /* Center vertically */
+  padding: 10px;
+  grid-column: 3;
+  grid-row: 3; /* Adjust this according to its position in the grid layout */
+}
+
+#clear-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px; /* Adds padding inside the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 75px; /* Specify the height you want */
+  width: 150px; /* Specify the width you want */
+  font-size: 1em; /* Adjust font size as needed */
+  box-sizing: border-box; /* Include padding in the button's total width and height */
+  outline: none; /* Remove outline when button is focused or active */
+}
+
+/* Additional styles if you want to add hover effects */
+#clear-button:hover {
+  background-color: #0056b3;
+}
+.controls-grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Two columns with equal width */
+  grid-template-rows: repeat(10, 1fr); /* Ten rows with equal height */
+  gap: 10px; /* Space between rows and columns */
+  /* max-width: 600px;  Adjust to required max width */
+  margin: 0 auto; /* Center the grid in the page */
+  padding: 10px; /* Add some padding around the grid */
+}
+
+/* Optional: Add some basic styling to the individual grid items */
+.controls-grid-container div {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}

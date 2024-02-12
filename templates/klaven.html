@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Chat Interface</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      iframe {
+        max-width: 100%;
+        border: "1px";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      This is a stupid example AI chatbot, for the purpose of testing
+      AgentHost.AI
+    </h1>
+    <div class="iframe-container">
+      <iframe
+        src="https://www.agenthost.ai/chat/klifklaven?embed=true"
+        width="100%"
+        height="600px"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>
