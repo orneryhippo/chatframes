@@ -5,11 +5,7 @@ from flask_cors import CORS, cross_origin
 from flask_bcrypt import Bcrypt
 import httpx
 import requests 
-from pprint import pprint as pp
-from icecream import ic 
 from datetime import datetime 
-# import prompts
-from dotenv import load_dotenv
 import os
 import logging
 
