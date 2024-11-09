@@ -23,7 +23,7 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return render_template('waitlist-ai.html')
+    return render_template('chatzones.html')
 
 @app.route("/chatzone")
 def chatzone():
